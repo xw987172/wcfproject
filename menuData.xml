@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data xmlns="">
+  <Operation Name="部门管理" Gesture="F" Ico="/Images/out.ico">
+    <Operation Name="部门列表" Gesture="Control+P" Uid="/Department/DpmtList.xaml" Model="Jump"/>
+    <Operation Name="新增部门" Gesture="Control+W" Uid="/Department/AddDpmt.xaml" Model="Show"/>
+  </Operation>
+  <Operation Name="员工管理" Gesture="E" Ico="/Images/admin.ico">
+    <Operation Name="员工列表" Gesture="Control+C" Uid="/Employee/EmpList.xaml" Model="Jump"/>
+    <Operation Name="新增员工" Gesture="Control+X" Uid="/Employee/AddEmp.xaml" Model="Show"/>
+  </Operation>
+</Data>

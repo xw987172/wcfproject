@@ -1,0 +1,17 @@
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\MainWindow.g.cs
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\App.g.cs
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher_MarkupCompile.cache
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher_MarkupCompile.lref
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\bin\Debug\SpiderWatcher.exe.config
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\bin\Debug\SpiderWatcher.exe
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\bin\Debug\SpiderWatcher.pdb
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\MainWindow.baml
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.g.resources
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.Properties.Resources.resources
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.csproj.GenerateResource.cache
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.csproj.CoreCompileInputs.cache
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.exe
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.pdb
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\pages\dbsetting.g.cs
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\pages\dbsetting.baml
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.csprojResolveAssemblyReference.cache
