@@ -40,9 +40,23 @@ namespace SpiderWatcher
             string name = xe.Attributes["Name"].Value;
             string uid = xe.Attributes["Uid"].Value;
             string model = xe.Attributes["Model"].Value;
-            MessageBox.Show(name);
-            MessageBox.Show(uid);
-            MessageBox.Show(model);
+            if (model == "Jump")
+                this.mainFrame.Navigate(new Uri(uid, UriKind.Relative));
+            else
+                ShowPage(name, uid);
+        }
+
+        private void ShowPage(string title, string uri)
+        {
+            NavigationWindow window = new NavigationWindow();
+            window.Title = title;
+            window.Width = 300;
+            window.Height = 200;
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.ResizeMode = ResizeMode.NoResize;
+            window.Source = new Uri(uri, UriKind.Relative);
+            window.ShowsNavigationUI = false;
+            window.Show();
         }
     }
 }

@@ -66,12 +66,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="observe\index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\dbsetting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="observe\index.xaml.cs">
+      <DependentUpon>index.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\dbsetting.xaml.cs">
       <DependentUpon>dbsetting.xaml</DependentUpon>
     </Compile>
@@ -103,6 +110,7 @@
   <ItemGroup>
     <Resource Include="menuData.xml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

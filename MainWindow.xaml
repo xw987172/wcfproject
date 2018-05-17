@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpiderWatcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
     <Window.Resources>
         <!--数据源-->
         <XmlDataProvider x:Key="dsMenu"  Source="MenuData.xml" XPath="Data/Operation" />
@@ -31,6 +31,6 @@
             <Menu ItemsSource="{Binding Source={StaticResource dsMenu}}"/>
         </StackPanel>
         <!--显示内容-->
-        <Frame Grid.Row="1" x:Name="mainFrame" Source="pages/dbsetting.xaml"  NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="1" x:Name="mainFrame" Source="observe/index.xaml"  NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

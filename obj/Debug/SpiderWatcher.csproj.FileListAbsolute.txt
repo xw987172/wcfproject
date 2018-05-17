@@ -15,3 +15,5 @@ C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatche
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\pages\dbsetting.g.cs
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\pages\dbsetting.baml
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.csprojResolveAssemblyReference.cache
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\observe\index.g.cs
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\observe\index.baml

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\App.xaml
-21820471846
+372533766
 
-10-963424718
+1160853735
 131569487696
-MainWindow.xaml;pages\dbsetting.xaml;
+MainWindow.xaml;observe\index.xaml;pages\dbsetting.xaml;
 
-True
+False
 
