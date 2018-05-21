@@ -22,15 +22,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="24"/>
             <RowDefinition/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <!--菜单-->
-        <StackPanel Grid.Row="0" MenuItem.Click="menuClick">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" MenuItem.Click="menuClick">
             <Menu ItemsSource="{Binding Source={StaticResource dsMenu}}"/>
         </StackPanel>
         <!--显示内容-->
-        <Frame Grid.Row="1" x:Name="mainFrame" Source="observe/index.xaml"  NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="mainFrame" Source="./Views/Home.xaml"  NavigationUIVisibility="Hidden"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Label x:Name="msg" HorizontalAlignment="Center">此处显示message表的数据！</Label>
+        </StackPanel>
     </Grid>
 </Window>

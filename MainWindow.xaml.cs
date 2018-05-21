@@ -14,6 +14,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using SpiderWatcher.pages;
+using SpiderWatcher.observe;
+using System.Reflection;
+using System.Diagnostics;
+using System.Windows.Threading;
+using DAOLib;
+using System.Data;
 
 namespace SpiderWatcher
 {
@@ -25,12 +31,38 @@ namespace SpiderWatcher
         public MainWindow()
         {
             InitializeComponent();
+            //消息定时器
+            DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(Msg);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 60);
+            dispatcherTimer.Start();
         }
 
-        private void dbsetting(object sender, RoutedEventArgs e)
+        private void Msg(object sender,EventArgs e) {
+            string sql = "select * from spider.message order by id desc limit 1";
+            DataSet dset = new DataSet();
+            dset = dao.Ins.ExecuteDataSet(sql);
+            DataRow dRow = dset.Tables[0].Rows[0];
+            string msg = dRow["message"] + "\t" + dRow["createtime"].ToString();
+            this.msg.Content = msg;
+        }
+
+        private void Navigate(string path)
         {
-            dbsetting dbs = new dbsetting();
-            Content = dbs;
+            string uri = "SpiderWatcher." + path;
+            Type type = Type.GetType(uri);
+            if (type != null) {
+                object obj = type.Assembly.CreateInstance(uri);
+                Page uControl = obj as Page;
+                this.mainFrame.Content = uControl;
+                PropertyInfo[] infos = type.GetProperties();
+                foreach (PropertyInfo info in infos) {
+                    if (info.Name == "ParentWin") {
+                        info.SetValue(uControl, this, null);
+                        break;
+                    }
+                }
+            }
         }
 
         private void menuClick(object sender, RoutedEventArgs e)
@@ -40,23 +72,24 @@ namespace SpiderWatcher
             string name = xe.Attributes["Name"].Value;
             string uid = xe.Attributes["Uid"].Value;
             string model = xe.Attributes["Model"].Value;
-            if (model == "Jump")
-                this.mainFrame.Navigate(new Uri(uid, UriKind.Relative));
-            else
-                ShowPage(name, uid);
+            Navigate(uid);
         }
 
-        private void ShowPage(string title, string uri)
+        //private void ShowPage(string title, string uri)
+        //{
+        //    NavigationWindow window = new NavigationWindow();
+        //    window.Title = title;
+        //    window.Width = 300;
+        //    window.Height = 200;
+        //    window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        //    window.ResizeMode = ResizeMode.NoResize;
+        //    window.Source = new Uri(uri, UriKind.Relative);
+        //    window.ShowsNavigationUI = false;
+        //    window.Show();
+        //}
+        public void callFromChild(string name)
         {
-            NavigationWindow window = new NavigationWindow();
-            window.Title = title;
-            window.Width = 300;
-            window.Height = 200;
-            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            window.ResizeMode = ResizeMode.NoResize;
-            window.Source = new Uri(uri, UriKind.Relative);
-            window.ShowsNavigationUI = false;
-            window.Show();
+            MessageBox.Show("hello, "+name+ "!");
         }
     }
 }
