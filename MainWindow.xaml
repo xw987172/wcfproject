@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpiderWatcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900">
+        Title="爬虫监管系统" Height="600" Width="900">
     <Window.Resources>
         <!--数据源-->
         <XmlDataProvider x:Key="dsMenu"  Source="MenuData.xml" XPath="Data/Operation" />
@@ -17,6 +17,7 @@
                 <TextBlock Text="{Binding XPath=@Gesture}" />
             </StackPanel>
         </HierarchicalDataTemplate>
+        
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -25,18 +26,24 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <!--菜单-->
         <StackPanel Grid.Row="0" Grid.ColumnSpan="3" MenuItem.Click="menuClick">
             <Menu ItemsSource="{Binding Source={StaticResource dsMenu}}"/>
         </StackPanel>
         <!--显示内容-->
-        <Frame Grid.Row="1" Grid.Column="1" x:Name="mainFrame" Source="./Views/Home.xaml"  NavigationUIVisibility="Hidden"/>
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+        <Frame Grid.Column="1" Grid.Row="1" x:Name="mainFrame" Source="./Views/Home.xaml"  NavigationUIVisibility="Hidden"/>
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
             <Label x:Name="msg" HorizontalAlignment="Center">此处显示message表的数据！</Label>
+        </StackPanel>
+        <!--左侧导航栏-->
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button Style="{StaticResource m10}" x:Uid="pages.dbsetting" Content="数据库设置" Click="buttonClick"/>
+            <Button Style="{StaticResource m10}" Content="爬虫规则"/>
+            <Button Style="{StaticResource m10}" Content="分布式机器"/>
         </StackPanel>
     </Grid>
 </Window>

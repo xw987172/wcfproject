@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DAOLib;
 using SpiderWatcher.pages;
-
+using System.Windows.Threading;
 namespace SpiderWatcher.observe
 {
     /// <summary>
@@ -49,6 +49,17 @@ namespace SpiderWatcher.observe
         public ObserveHome()
         {
             InitializeComponent();
+            InitList();
+            DispatcherTimer dispatcher = new DispatcherTimer();
+            dispatcher.Tick += new EventHandler(timer);
+            dispatcher.Interval = new TimeSpan(0, 0, 60);
+            dispatcher.Start();
+        }
+
+        private void timer(Object sender, EventArgs e)
+        {
+            //this.doInfoList.ItemsSource = null;
+            this.doInfoList.Items.Clear();
             InitList();
         }
 

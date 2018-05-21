@@ -9,6 +9,28 @@
       Title="dbsetting">
 
     <Grid>
-        <Label>hello ,this is dbsettings!</Label>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,10,0" Text="主机" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="2" Grid.Row="0" MinHeight="30" MaxHeight="60" MinWidth="200" MaxWidth="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,10,0" Text="端口" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="2" Grid.Row="1" MinHeight="30" MaxHeight="60" MinWidth="200" MaxWidth="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="0,0,10,0" Text="用户名" HorizontalAlignment="Right"/>
+        <TextBox Grid.Column="2" Grid.Row="2" MinHeight="30" MaxHeight="60" MinWidth="200" MaxWidth="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="0,0,10,0" Text="密码" HorizontalAlignment="Right"/>
+        <PasswordBox Grid.Column="2" Grid.Row="3" MinHeight="30" MaxHeight="60" MinWidth="200" MaxWidth="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="确定" MinHeight="30" MaxHeight="40" MinWidth="50" MaxWidth="70" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="确定" MinHeight="30" MaxHeight="40" MinWidth="50" MaxWidth="70" VerticalAlignment="Center" Margin="100,0,0,0" HorizontalAlignment="Left"/>
     </Grid>
 </Page>

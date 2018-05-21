@@ -44,6 +44,7 @@ namespace SpiderWatcher
             dset = dao.Ins.ExecuteDataSet(sql);
             DataRow dRow = dset.Tables[0].Rows[0];
             string msg = dRow["message"] + "\t" + dRow["createtime"].ToString();
+            this.msg.Foreground = new SolidColorBrush(Colors.Red);
             this.msg.Content = msg;
         }
 
@@ -90,6 +91,12 @@ namespace SpiderWatcher
         public void callFromChild(string name)
         {
             MessageBox.Show("hello, "+name+ "!");
+        }
+
+        private void buttonClick(object sender, RoutedEventArgs e)
+        {
+            Button mi = e.OriginalSource as Button;
+            Navigate(mi.Uid);
         }
     }
 }

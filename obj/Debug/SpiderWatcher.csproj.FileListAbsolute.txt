@@ -27,3 +27,5 @@ C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatche
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.csproj.CopyComplete
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.exe
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.pdb
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\App.baml
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\static\style.baml
