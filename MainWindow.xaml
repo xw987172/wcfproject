@@ -36,8 +36,11 @@
         </StackPanel>
         <!--显示内容-->
         <Frame Grid.Column="1" Grid.Row="1" x:Name="mainFrame" Source="./Views/Home.xaml"  NavigationUIVisibility="Hidden"/>
-                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-            <Label x:Name="msg" HorizontalAlignment="Center">此处显示message表的数据！</Label>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Image Source="./static/imgs/music138.png" Width="20" Height="20"/>
+            <Label x:Name="msg" HorizontalAlignment="Center">
+                此处显示message表的数据！
+            </Label>
         </StackPanel>
         <!--左侧导航栏-->
         <StackPanel Grid.Column="0" Grid.Row="1">

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("menudata.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("static/imgs/music138.png")]
 
 
