@@ -98,5 +98,20 @@ namespace SpiderWatcher
             Button mi = e.OriginalSource as Button;
             Navigate(mi.Uid);
         }
+
+        private void noticeBtn(object sender, RoutedEventArgs e)
+        {
+            Navigate("notice");
+        }
+
+        private void x_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

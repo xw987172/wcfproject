@@ -1,0 +1,18 @@
+﻿<base:BasePage x:Class="SpiderWatcher.notice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:base="clr-namespace:SpiderWatcher"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="notice">
+
+    <Grid>
+        <TextBlock Margin="20">
+            1、本爬虫框架逻辑层上是使用了job指令层，scheduler+反射的定时调度，中间穿插message(异常和错误)，漏缺任务重处理；<LineBreak/><LineBreak/>
+            2、job指令层，存在于mysql sys_task_info表中,通过schedule.py查询调用；<LineBreak/><LineBreak/>
+            3、异常和错误信息存在于message表；<LineBreak/><LineBreak/>
+        </TextBlock>
+    </Grid>
+</base:BasePage>

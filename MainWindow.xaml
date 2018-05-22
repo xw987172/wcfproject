@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpiderWatcher"
         mc:Ignorable="d"
+        BorderBrush="#FF87AFD4"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown"
         Title="爬虫监管系统" Height="600" Width="900">
     <Window.Resources>
         <!--数据源-->
@@ -17,24 +20,35 @@
                 <TextBlock Text="{Binding XPath=@Gesture}" />
             </StackPanel>
         </HierarchicalDataTemplate>
-        
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="static/defaultbkg.jpg"/>
+    </Window.Background>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="24"/>
-            <RowDefinition/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
-        <!--菜单-->
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" MenuItem.Click="menuClick">
+        <Grid Margin="0,30,0,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.002"/>
+                    <GradientStop Color="WhiteSmoke" Offset="1"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.002"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <!--菜单-->
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" MenuItem.Click="menuClick">
             <Menu ItemsSource="{Binding Source={StaticResource dsMenu}}"/>
         </StackPanel>
-        <!--显示内容-->
+            <!--显示内容-->
+            
         <Frame Grid.Column="1" Grid.Row="1" x:Name="mainFrame" Source="./Views/Home.xaml"  NavigationUIVisibility="Hidden"/>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
             <Image Source="./static/imgs/music138.png" Width="20" Height="20"/>
@@ -42,11 +56,24 @@
                 此处显示message表的数据！
             </Label>
         </StackPanel>
-        <!--左侧导航栏-->
+        
+            <!--左侧导航栏-->
+            
         <StackPanel Grid.Column="0" Grid.Row="1">
             <Button Style="{StaticResource m10}" x:Uid="pages.dbsetting" Content="数据库设置" Click="buttonClick"/>
-            <Button Style="{StaticResource m10}" Content="爬虫规则"/>
+            <Button Style="{StaticResource m10}" Content="爬虫规则" Click="noticeBtn"/>
             <Button Style="{StaticResource m10}" Content="分布式机器"/>
         </StackPanel>
+        </Grid>
+        <Border BorderBrush="#4F49779B" BorderThickness="0,1,0,0" Margin="3,0,3,3" Height="32" VerticalAlignment="Bottom" Background="White"/>
+        <Button x:Name="x" Content="Button" HorizontalAlignment="Right" Height="24" Style="{DynamicResource XButtonStyle}" VerticalAlignment="Top" Width="46" Margin="0,-1,0,0" Click="x_Click" />
+        <Button x:Name="m" Content="Button" HorizontalAlignment="Right" Height="24" Style="{DynamicResource MButtonStyle}" VerticalAlignment="Top" Width="35.5" Margin="0,-1,46.25,0"/>
+        <Button x:Name="__" Content="Button" HorizontalAlignment="Right" Height="24" Style="{DynamicResource -ButtonStyle}" VerticalAlignment="Top" Width="35" Margin="0,-1,82.2,0"/>
+        <Button x:Name="s" Content="Button" HorizontalAlignment="Right" Height="24" Style="{DynamicResource sButtonStyle}" VerticalAlignment="Top" Width="42" Margin="0,-1,117.45,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="54" StrokeThickness="0" VerticalAlignment="Top" Width="54" Margin="3,3,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="./static/imgs/tt.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>

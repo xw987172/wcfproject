@@ -29,3 +29,6 @@ C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatche
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\SpiderWatcher.pdb
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\App.baml
 C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\static\style.baml
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\notice.g.cs
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\notice.baml
+C:\Users\xwtoday\source\repos\MvvmLight1slt\SpiderWatcher\obj\Debug\static\Button.baml
